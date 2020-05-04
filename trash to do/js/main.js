@@ -1,11 +1,13 @@
 let list = document.querySelector('ul');
 list.addEventListener('click', function(ev){
+	// Определение события
 	if(ev.target.tagName === 'LI'){
-		ev.target.classList.toggle('checked');
+		ev.target.classList.toggle('checked'); // Если тыкаю по li, то unchecked -> checked
 	}
 	else if(ev.target.tagName === 'SPAN'){
 			let div = ev.target.parentNode;
 			div.remove();
+			// Если тыкаю по span, которым является иконка мусорки, то удаляется весь li 
 		}
 	
 }, false);
@@ -23,9 +25,8 @@ function newElement() {
 	}
 	document.getElementById('toDoEl').value = '';
 	let span = document.createElement('SPAN');
-	let txt = document.createElement('IMG');
+	let txt = document.createElement('SPAN');
 	span.className = 'close';
-	txt.src = 'img/trash.png';
 	span.appendChild(txt);
 	li.appendChild(span);
 	}
