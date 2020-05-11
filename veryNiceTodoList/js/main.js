@@ -25,7 +25,11 @@ function newElement() {
 	let t = document.createTextNode(inputValue);
 	li.appendChild(t);
 	if(inputValue == ''){
-		alert('Вы ничего не написали, напишите то, что хотите сделать!');
+		alrtInput = prompt('Вы ничего не написали, напишите то, что хотите сделать!');
+		alrtInput.value;
+		t = document.createTextNode(alrtInput);
+		li.appendChild(t);
+		document.getElementById('list').appendChild(li);
 	}
 	else{
 		document.getElementById('list').appendChild(li);
