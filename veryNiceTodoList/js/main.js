@@ -19,19 +19,17 @@ list.addEventListener('click', function(ev){
 	
 }, false);
 
-function newElement() {
+const btn = document.querySelector('button');
+
+btn.addEventListener('click', () => {
 	let li = document.createElement('li');
-	let inputValue = document.getElementById('toDoEl').value;
+	let inputValue = document.getElementById('toDoEl').value.trim();
 	let t = document.createTextNode(inputValue);
 	li.appendChild(t);
-	if(inputValue == ''){
-		alrtInput = prompt('Вы ничего не написали, напишите то, что хотите сделать!');
-		alrtInput.value;
-		t = document.createTextNode(alrtInput);
-		li.appendChild(t);
-		document.getElementById('list').appendChild(li);
-	}
-	else{
+
+	if (inputValue == '') {
+		const err = document.querySelector('input').placeholder = 'Вы ничего не ввели или ввели пустой запрос';
+	} else{
 		document.getElementById('list').appendChild(li);
 	}
 	document.getElementById('toDoEl').value = '';
@@ -41,7 +39,7 @@ function newElement() {
 	span.appendChild(txt);
 	li.appendChild(span);
 	todoLocal();
-	}
+});
 
 	if(localStorage.getItem('todoStorage')) {
 		list.innerHTML = localStorage.getItem('todoStorage');
