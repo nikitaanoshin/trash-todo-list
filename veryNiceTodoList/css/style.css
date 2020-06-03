@@ -114,8 +114,12 @@ input {
     cursor: pointer;
 	 transition: 0.5s;
 	 border-radius: 10px;
+	 border: none;
+	 outline: none;
 }
 
 .addBtn:hover {
-    background-color: #005de0;
+	 background-color: #005de0;
+	 border: none;
+	 outline: none;
 }
